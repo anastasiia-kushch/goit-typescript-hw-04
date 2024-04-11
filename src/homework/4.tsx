@@ -4,7 +4,7 @@ import noop from 'lodash/noop';
 type MenuIds = 'first' | 'second' | 'last';
 type Menu = { id: MenuIds; title: string };
 type SelectedMenu = {
-  id: MenuIds;
+  id?: MenuIds;
 };
 
 // Описати тип SelectedMenu: Це має бути об'єкт, який містить id з типом MenuIds
