@@ -5,15 +5,12 @@ type Props = {
   onContentEndVisible: () => void;
 };
 
-type Options = {
-  [key: string]: string | number | null;
-};
 
 export function Observer({ children, onContentEndVisible }: Props) {
   const endContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const options: Options = {
+    const options: IntersectionObserverInit = {
       rootMargin: '0px',
       threshold: 1.0,
       root: null,
